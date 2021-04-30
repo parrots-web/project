@@ -9,16 +9,22 @@ const personalMovieDB = {
     privat: false
 };
 
-let i = 0;
+// let i = 0;
 const titles = [],
       ratings = [];
 
-do {
+// do {
+//     titles[i] = prompt('Один из последних просмотренных фильмов?', '');
+//     ratings[i] = prompt('На сколько оцените его?', '');
+//     personalMovieDB.movies[titles[i]] = ratings[i];
+//     i++;
+//     }
+// while (i < 2);
+
+for (let i = 0; i < personalMovieDB.count; i++) {
     titles[i] = prompt('Один из последних просмотренных фильмов?', '');
     ratings[i] = prompt('На сколько оцените его?', '');
-    personalMovieDB.movies[titles[i]] = ratings[i];
-    i++;
-    }
-while (i < 2);
+    personalMovieDB.movies[titles[i]] = ratings[i];    
+}
 
 console.log(personalMovieDB);
